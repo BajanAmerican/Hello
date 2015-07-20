@@ -1,0 +1,12 @@
+name: Test
+main: me.BajanAmerican.Test.test
+version: 1.0
+description: >
+              My Youtube plugin. 
+commands:
+     test: 
+       description: sends player a message saying that the plugin has worked
+     clear: 
+       description: sends player a message saying that the plugin has worked
+     execute: 
+       description: sends player a message saying that the plugin has worked
