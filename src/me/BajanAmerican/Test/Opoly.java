@@ -77,7 +77,7 @@ public class Opoly {
 			{
 				int dif = ((i+rand)%(board.length));
 				board[i] = 0;
-				board[dif-1] = 1;
+				board[dif] = 1;
 				points+=100;
 				check_modifiers();
 				went = true;
