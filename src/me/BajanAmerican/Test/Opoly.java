@@ -64,7 +64,7 @@ public class Opoly {
 	public int spin()
 	{
 		spin_counter++;
-		return ((int)((r.nextDouble()*5)+1));
+		return (r.nextInt(5)+1);
 	}
 	
 	public void move(int rand)
@@ -75,9 +75,8 @@ public class Opoly {
 		{
 			if((board[i] == 1)&&((i+rand)>(board.length-1)))
 			{
-				int dif = ((i+rand)%(board.length));
 				board[i] = 0;
-				board[dif] = 1;
+				board[((i+rand)%(board.length))] = 1;
 				points+=100;
 				check_modifiers();
 				went = true;
@@ -100,7 +99,7 @@ public class Opoly {
 	
 	public void check_modifiers()
 	{
-		if(spin_counter == 10)
+		if((spin_counter % 10 == 0) %% (spin_counter > 0))
 			points-=50;
 		for(int i = 0; i < board.length; i++)
 		{
@@ -116,9 +115,7 @@ public class Opoly {
 	
 	public boolean isGameOver()
 	{
-		if(points >= 1000)
-			return true;
-		return false;
+		return (points >= 1000);
 	}
 	
 	public void displayReport()
