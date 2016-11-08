@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class WordPercentages extends FileAccessor{
 	
-	double[] wordPercentages;
+	int[] wordPercentages;
 	double total_words = 0.0;
 	
 	public WordPercentages(String f) throws IOException
 	{
 		super(f);
-		wordPercentages = new double[16];
+		wordPercentages = new int[16];
 	}
 
 	public double getAvgWordLength() 
